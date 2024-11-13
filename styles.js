@@ -91,6 +91,17 @@ export const darkStyles = StyleSheet.create({
     fontSize: 18,
     fontWeight: '600',
   },
+  converterButton:{
+    backgroundColor: '#28a745',
+    paddingVertical: 12,
+    paddingHorizontal: 24,
+    borderRadius: 8,
+  },
+  converterButtonText: {
+    color: '#fff',
+    fontSize: 18,
+    fontWeight: '600',
+  }
 
 });
 

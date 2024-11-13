@@ -15,7 +15,7 @@ const CurrencyConverterApp = () => {
 
   useEffect(() => {
     if (!showWelcome) {
-      fetchExchangeRate(baseCurrency, targetCurrency, setExchangeRate, setError);
+      //fetchExchangeRate(baseCurrency, targetCurrency, setExchangeRate, setError);
     }
   }, [baseCurrency, targetCurrency, showWelcome]);
 
@@ -67,7 +67,7 @@ const CurrencyConverterApp = () => {
             style={styles.input}
             keyboardType="numeric"
             value={amount}
-            onChangeText={handleAmountChange}
+          onChangeText={handleAmountChange}
             placeholder="Enter amount"
             placeholderTextColor={isDarkMode ? '#aaa' : '#666'}
           />
@@ -89,8 +89,13 @@ const CurrencyConverterApp = () => {
               <Picker.Item label="BRL" value="BRL" />
               <Picker.Item label="SGD" value="SGD" />
               <Picker.Item label="MXN" value="MXN" />
+              <Picker.Item label="LKR" value="LKR" />
             </Picker>
           </View>
+
+          <TouchableOpacity style={styles.converterButton} onPress={(fetchExchangeRate) => (false)}>
+          <Text style={styles.converterButtonText}>Convert</Text>
+        </TouchableOpacity>
 
           <View style={styles.arrowContainer}>
             <Text style={styles.arrow}>↓</Text>
@@ -111,6 +116,7 @@ const CurrencyConverterApp = () => {
               <Picker.Item label="BRL" value="BRL" />
               <Picker.Item label="SGD" value="SGD" />
               <Picker.Item label="MXN" value="MXN" />
+              <Picker.Item label="LKR" value="LKR" />
             </Picker>
           </View>
 
